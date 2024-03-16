@@ -1,0 +1,15 @@
+spring:
+  cloud:
+    gateway:
+      routes:
+        - id: stocky-service-route
+          uri: lb://stocky-service
+          predicates:
+            - Path=/api/stocky-service/**
+        - id: stocky-service-route
+          uri: lb://stocky-service
+          predicates:
+            - Path=/api/stocky-service/**
+
+
+
